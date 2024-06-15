@@ -12,7 +12,7 @@ end
 
 -- Infinite loop to continuously attack players
 while true do
-    wait(0.001)  -- Adjusted wait time for faster execution
+    wait(0.0001)  -- Adjusted wait time for faster execution
     
     local players = Players:GetPlayers()
     
@@ -43,5 +43,7 @@ while true do
             }
             RemoteEvent:FireServer(unpack(args))
         end
+        
+        wait(0.0001)  -- Adding a small delay between attacks
     end
 end
