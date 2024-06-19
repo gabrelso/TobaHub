@@ -46,6 +46,9 @@ end
 -- Criando os TextLabels com diferentes tamanhos de texto e posições
 local titleText = createTextLabel("Kills Tracker UwU", 18, 0.15)  -- Título no topo
 local levelText = createTextLabel("Kills: 0", 14, 0.45)   -- Texto do nível no meio
+local playersText = createTextLabel("Players: 0", 14, 0.75)   -- Texto do nível no meio
+
+
 
 -- Função para atualizar o valor de kills a cada 0.5 segundos
 spawn(function()
@@ -54,6 +57,23 @@ spawn(function()
         wait(0.5)
     end
 end)
+
+
+
+spawn(function()
+    while true do
+        -- Obter a quantidade de jogadores no servidor
+        local playerCount = #game.Players:GetPlayers()
+
+        -- Atualizar o texto de playersText
+        playersText.Text = "Players: " .. playerCount
+
+        wait(0.5)
+    end
+end)
+
+
+
 
 -- Função para tornar a GUI arrastável
 local function enableDragging(frame)
