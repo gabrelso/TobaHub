@@ -1,7 +1,7 @@
 local Settings = {
 	TitleText = "Toba<b>Hub</b>",
 	DescriptionText = "O script mais lgbt do mundo!",
-	UIGradientEnabled = false
+	UIGradientEnabled = false,
 	ProgressBarEnabled = false,
 	AnimatedText = true,
 	GoofyBackground = true,
