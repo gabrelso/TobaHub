@@ -8,7 +8,7 @@ local previousJobId
 
 local function createGUI()
     if screenGui then
-        screenGui:Destroy()  
+        return
     end
 
     screenGui = Instance.new("ScreenGui")
@@ -87,4 +87,5 @@ player.CharacterAdded:Connect(onCharacterAdded)
 if player.Character then
     onCharacterAdded(player.Character)
 else
-    player.Charact
+    player.CharacterAdded:Wait()
+end
