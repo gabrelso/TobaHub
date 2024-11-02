@@ -66,7 +66,7 @@ local function createGUI()
     button.Parent = frame
 
     button.MouseButton1Click:Connect(function()
-        local waitTime = tonumber(textBox.Text) or 2.2
+        local waitTime = tonumber(textBox.Text) or 1.5
         game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
         _wait(waitTime)
         player:Kick("VAMOS TORCER PARA FUNCIONAR! [NÃO FECHE ISSO]")
