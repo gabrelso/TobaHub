@@ -51,7 +51,7 @@ local function createGUI()
     textBox.TextColor3 = Color3.fromRGB(240, 240, 240)
     textBox.TextSize = 18
     textBox.PlaceholderText = "Wait time"
-    textBox.Text = "1.5"
+    textBox.Text = "0.8"
     textBox.Parent = frame
 
     local button = Instance.new("TextButton")
@@ -66,7 +66,7 @@ local function createGUI()
     button.Parent = frame
 
     button.MouseButton1Click:Connect(function()
-        local waitTime = tonumber(textBox.Text) or 1.5
+        local waitTime = tonumber(textBox.Text) or 0.8
         game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
         _wait(waitTime)
         player:Kick("VAMOS TORCER PARA FUNCIONAR! [NÃO FECHE ISSO]")
