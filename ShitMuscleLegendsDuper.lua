@@ -8,7 +8,8 @@ local previousJobId
 
 local function createGUI()
     if screenGui then
-        screenGui:Destroy()
+        screenGui.Enabled = true
+        return
     end
 
     screenGui = Instance.new("ScreenGui")
