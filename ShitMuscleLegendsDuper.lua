@@ -5,12 +5,14 @@ local screenGui
 local lastPosition = UDim2.new(0.5, -75, 0.5, -75)  
 local waitTime = 2.2
 local previousJobId
+local guiCreated = false
 
 local function createGUI()
-    if screenGui then
+    if guiCreated then
         return
     end
 
+    guiCreated = true
     screenGui = Instance.new("ScreenGui")
     screenGui.Parent = player:WaitForChild("PlayerGui")
 
@@ -70,6 +72,7 @@ local function createGUI()
         previousJobId = game.JobId
         task.wait(waitTime)
         player:Kick("Lets hope it worked!")
+        task.wait(5)
         TeleportService:TeleportToPlaceInstance(game.PlaceId, previousJobId, player)
     end)
 
