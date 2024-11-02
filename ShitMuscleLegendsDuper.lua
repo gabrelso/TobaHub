@@ -51,7 +51,7 @@ local function createGUI()
     textBox.TextColor3 = Color3.fromRGB(240, 240, 240)
     textBox.TextSize = 18
     textBox.PlaceholderText = "Wait time"
-    textBox.Text = "2.2"
+    textBox.Text = "1.5"
     textBox.Parent = frame
 
     local button = Instance.new("TextButton")
