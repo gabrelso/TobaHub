@@ -9,6 +9,7 @@ local previousJobId
 local function createGUI()
     if screenGui then
         screenGui.Enabled = true
+        screenGui.Frame.Position = lastPosition
         return
     end
 
