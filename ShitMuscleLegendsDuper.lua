@@ -2,7 +2,7 @@
 
 local Players = game:GetService("Players")
 
-local acceptTrade = {
+local args = {
     [1] = "acceptTrade"
 }
 
@@ -67,7 +67,7 @@ local function createGUI()
 
     button.MouseButton1Click:Connect(function()
         local waitTime = tonumber(textBox.Text) or 2.2
-        game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(acceptTrade))
+        game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
         _wait(waitTime)
         player:Kick("VAMOS TORCER PARA FUNCIONAR! [NÃO FECHE ISSO]")
         _wait(1)
