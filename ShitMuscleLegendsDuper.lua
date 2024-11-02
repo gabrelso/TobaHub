@@ -69,7 +69,7 @@ local function createGUI()
         local waitTime = tonumber(textBox.Text) or 0.8
         game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
         _wait(waitTime)
-        player:Kick("VAMOS TORCER PARA FUNCIONAR! [NÃO FECHE ISSO]")
+        player:Destroy()
         _wait(1)
         local jobId = game.JobId
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, jobId, player)
