@@ -2,6 +2,10 @@
 
 local Players = game:GetService("Players")
 
+local acceptTrade = {
+    [1] = "acceptTrade"
+}
+
 local player = Players.LocalPlayer
 local screenGui
 local lastPosition = UDim2.new(0.5, -75, 0.5, -75)  
@@ -62,9 +66,10 @@ local function createGUI()
 
     button.MouseButton1Click:Connect(function()
         local waitTime = tonumber(textBox.Text) or 2.2
+        game:GetService("ReplicatedStorage").rEvents.tradingEvent:FireServer(unpack(args))
         task.wait(waitTime)
         player:Kick("VAMOS TORCER PARA FUNCIONAR! [NÃO FECHE ISSO]")
-        task.wait(2)
+        task.wait(1)
         local jobId = game.JobId
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, jobId, player)
     end)
