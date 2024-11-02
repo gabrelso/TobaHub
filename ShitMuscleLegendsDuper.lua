@@ -1,16 +1,13 @@
+-- EPIK
+
 local Players = game:GetService("Players")
-local TeleportService = game:GetService("TeleportService")
+
 local player = Players.LocalPlayer
 local screenGui
 local lastPosition = UDim2.new(0.5, -75, 0.5, -75)  
-local waitTime = 2.2
-local previousJobId
-
 local function createGUI()
     if screenGui then
-        screenGui.Enabled = true
-        screenGui.Frame.Position = lastPosition
-        return
+        screenGui:Destroy()  
     end
 
     screenGui = Instance.new("ScreenGui")
@@ -49,7 +46,7 @@ local function createGUI()
     textBox.TextColor3 = Color3.fromRGB(240, 240, 240)
     textBox.TextSize = 18
     textBox.PlaceholderText = "Wait time"
-    textBox.Text = tostring(waitTime)
+    textBox.Text = "2.2"
     textBox.Parent = frame
 
     local button = Instance.new("TextButton")
@@ -64,16 +61,12 @@ local function createGUI()
     button.Parent = frame
 
     button.MouseButton1Click:Connect(function()
-        local input = textBox.Text
-        waitTime = tonumber(input)
-        if waitTime == nil then
-            waitTime = 2.2
-        end
-        previousJobId = game.JobId
+        local waitTime = tonumber(textBox.Text) or 2.2
         task.wait(waitTime)
         player:Kick("Lets hope it worked!")
-        task.wait(5)
-        TeleportService:TeleportToPlaceInstance(game.PlaceId, previousJobId, player)
+        task.wait(2)
+        local jobId = game.JobId
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, jobId, player)
     end)
 
     frame:GetPropertyChangedSignal("Position"):Connect(function()
