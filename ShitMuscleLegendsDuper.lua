@@ -27,7 +27,7 @@ local function createGUI()
     local backgroundImage = Instance.new("ImageLabel")
     backgroundImage.Size = UDim2.new(1, 0, 1, 0)
     backgroundImage.Position = UDim2.new(0, 0, 0, 0)
-    backgroundImage.Image = "rbxassetid://94652721578493"
+    backgroundImage.Image = "rbxassetid://70417686157126"
     backgroundImage.BackgroundTransparency = 1
     backgroundImage.Parent = frame
 
