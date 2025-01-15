@@ -6,7 +6,7 @@ repeat wait() until game:IsLoaded()
 function loadCock()
     spawn(function()
         -- [[ Boot up ]]
-        local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+        local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/RedzLibV5/refs/heads/main/Source.lua"))()
 
         local vu = game:GetService("VirtualUser")
         game.Players.LocalPlayer.Idled:Connect(function()
