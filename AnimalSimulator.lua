@@ -1,7 +1,3 @@
-if not _G.Toba then
-    _G.Toba = true
-end
-
 -- [[ Boot up ]]
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/gabrelso/RedzLibV5-fork/refs/heads/main/Source.lua"))()
 
