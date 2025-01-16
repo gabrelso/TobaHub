@@ -1,4 +1,4 @@
-local Toba
+local Toba = false
 local OL = local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 
 if Toba == true then
