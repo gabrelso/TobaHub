@@ -1,14 +1,5 @@
-getgenv().Toba
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-if getgenv().Toba == true then
-    OrionLib:MakeNotification({
-        Name = "Toba Hub", 
-        Content = "Toba Hub is already loaded!", 
-        Image = "rbxassetid://4483345998", 
-        Time = 5 
-    })
-    return
+if not _G.Toba then
+    _G.Toba = true
 end
 
 -- [[ Boot up ]]
@@ -763,5 +754,3 @@ function dealFireDamage()
         end
     end)
 end
-
-getgenv().Toba = true
