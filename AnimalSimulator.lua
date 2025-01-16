@@ -1,4 +1,3 @@
-repeat wait() until game:IsLoaded()
 local Toba
 local OL = local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 
