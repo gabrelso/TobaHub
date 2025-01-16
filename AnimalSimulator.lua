@@ -1,4 +1,4 @@
-local getgenv().Toba
+getgenv().Toba
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 if getgenv().Toba == true then
