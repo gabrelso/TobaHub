@@ -1045,7 +1045,7 @@ function S9_:CreateWindow(S91_arg0)
 		--// Section 
 		local S154_ = {}
 		local S155_ = 0
-		function S154_:AddLabel(S164_arg0, S165_arg1)
+		function S154_:AddSection(S164_arg0, S165_arg1)
 			local S166_ = S164_arg0 or "Title"
 			local S167_ = S165_arg1 or false
 
