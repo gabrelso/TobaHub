@@ -209,7 +209,7 @@ end
 local S9_ = {}
 S9_.Unloaded = false
 
-function S9_:MakeNotify(S65_arg0)
+function S9_:Notify(S65_arg0)
 	local S66_ = S65_arg0 or {}
 	S66_.Title = S66_.Title or "SpeedHubX"
 	S66_.Description = S66_.Description or "Notification"
@@ -427,7 +427,7 @@ function S9_:MakeNotify(S65_arg0)
 	return S67_
 end
 
-function S9_:MakeGui(S91_arg0)
+function S9_:CreateWindow(S91_arg0)
 	local S92_ = S91_arg0 or {}
 
 	S92_.NameHub = S92_.NameHub or ""
@@ -722,7 +722,7 @@ function S9_:MakeGui(S91_arg0)
 	S121_.ChildAdded:Connect(S123_func)
 	S121_.ChildRemoved:Connect(S123_func)
 
-	function S93_:DestroyGui()
+	function S93_:Destroy()
 		if S94_ then 
 			S94_:Destroy()
 		end
@@ -898,7 +898,7 @@ function S9_:MakeGui(S91_arg0)
 	local S137_ = {}
 	local S138_ = 0
 	local S139_ = 0
-	function S137_:CreateTab(S143_arg0)
+	function S137_:AddTab(S143_arg0)
 		local S144_ = S143_arg0 or {}
 		S144_.Name = S144_.Name or "Tab"
 		S144_.Icon = S144_.Icon or ""
@@ -1045,7 +1045,7 @@ function S9_:MakeGui(S91_arg0)
 		--// Section 
 		local S154_ = {}
 		local S155_ = 0
-		function S154_:AddSection(S164_arg0, S165_arg1)
+		function S154_:AddLabel(S164_arg0, S165_arg1)
 			local S166_ = S164_arg0 or "Title"
 			local S167_ = S165_arg1 or false
 
