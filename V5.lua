@@ -722,7 +722,7 @@ function S9_:CreateWindow(S91_arg0)
 	S121_.ChildAdded:Connect(S123_func)
 	S121_.ChildRemoved:Connect(S123_func)
 
-	function S93_:Destroy()
+	function S93_:DestroyGui()
 		if S94_ then 
 			S94_:Destroy()
 		end
