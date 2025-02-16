@@ -1603,208 +1603,184 @@ function S9_:CreateWindow(S91_arg0)
 				S185_ = S185_ + 1
 				return S213_
 			end
-			function S184_:AddSlider(S229_arg0)
-				local S230_ = S229_arg0 or {}
-				S230_.Title = S230_.Title or "Slider"
-				S230_.Content = S230_.Content or "Content"
-				S230_.Increment = S230_.Increment or 1
-				S230_.Min = S230_.Min or 0
-				S230_.Max = S230_.Max or 100
-				S230_.Default = S230_.Default or 50
-				S230_.Callback = S230_.Callback or function()
-				end
-				local S231_ = {
-					Value = S230_.Default
-				}
-	
-				local S232_ = Instance.new("Frame");
-				local S233_ = Instance.new("UICorner");
-				local S234_ = Instance.new("TextLabel");
-				local S235_ = Instance.new("TextLabel");
-				local S236_ = Instance.new("Frame");
-				local S237_ = Instance.new("UICorner");
-				local S238_ = Instance.new("TextBox");
-				local S239_ = Instance.new("Frame");
-				local S240_ = Instance.new("UICorner");
-				local S241_ = Instance.new("Frame");
-				local S242_ = Instance.new("UICorner");
-				local S243_ = Instance.new("UIStroke");
-				local S244_ = Instance.new("Frame");
-				local S245_ = Instance.new("UICorner");
-				local S246_ = Instance.new("UIStroke");
-				local S247_ = Instance.new("UIStroke");
+      function S184_:AddSlider(S229_arg0)
+            local S230_ = S229_arg0 or {}
+            S230_.Title = S230_.Title or "Slider"
+            S230_.Content = S230_.Content or "Content"
+            S230_.Increment = S230_.Increment or 1
+            S230_.Min = S230_.Min or 0
+            S230_.Max = S230_.Max or 100
+            S230_.Default = S230_.Default or 50
+            S230_.Callback = S230_.Callback or function() end
+            local S231_ = {
+                Value = S230_.Default
+            }
 
-				S232_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				S232_.BackgroundTransparency = 0.9350000023841858
-				S232_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S232_.BorderSizePixel = 0
-				S232_.LayoutOrder = S185_
-				S232_.Size = UDim2.new(1, 0, 0, 46)
-				S232_.Name = "Slider"
-				S232_.Parent = S179_
+            local S232_ = Instance.new("Frame")
+            local S233_ = Instance.new("UICorner")
+            local S234_ = Instance.new("TextLabel")
+            local S235_ = Instance.new("TextLabel")
+            local S236_ = Instance.new("Frame")
+            local S237_ = Instance.new("UICorner")
+            local S238_ = Instance.new("TextBox")
+            local S239_ = Instance.new("Frame")
+            local S240_ = Instance.new("UICorner")
+            local S241_ = Instance.new("Frame")
+            local S242_ = Instance.new("UICorner")
+            local S243_ = Instance.new("UIStroke")
+            local S244_ = Instance.new("Frame")
+            local S245_ = Instance.new("UICorner")
+            local S246_ = Instance.new("UIStroke")
+            local S247_ = Instance.new("UIStroke")
 
-				S233_.CornerRadius = UDim.new(0, 4)
-				S233_.Parent = S232_
+            S232_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            S232_.BackgroundTransparency = 0.935
+            S232_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S232_.BorderSizePixel = 0
+            S232_.LayoutOrder = S185_
+            S232_.Size = UDim2.new(1, 0, 0, 46)
+            S232_.Name = "Slider"
+            S232_.Parent = S179_
 
-				S234_.Font = Enum.Font.GothamBold
-				S234_.Text = S230_.Title
-				S234_.TextColor3 = Color3.fromRGB(230.77499270439148, 230.77499270439148, 230.77499270439148)
-				S234_.TextSize = 13
-				S234_.TextXAlignment = Enum.TextXAlignment.Left
-				S234_.TextYAlignment = Enum.TextYAlignment.Top
-				S234_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				S234_.BackgroundTransparency = 0.9990000128746033
-				S234_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S234_.BorderSizePixel = 0
-				S234_.Position = UDim2.new(0, 10, 0, 10)
-				S234_.Size = UDim2.new(1, -180, 0, 13)
-				S234_.Name = "SliderTitle"
-				S234_.Parent = S232_
+            S233_.CornerRadius = UDim.new(0, 4)
+            S233_.Parent = S232_
 
-				S235_.Font = Enum.Font.GothamBold
-				S235_.Text = S230_.Content
-				S235_.TextColor3 = Color3.fromRGB(255, 255, 255)
-				S235_.TextSize = 12
-				S235_.TextTransparency = 0.6000000238418579
-				S235_.TextXAlignment = Enum.TextXAlignment.Left
-				S235_.TextYAlignment = Enum.TextYAlignment.Bottom
-				S235_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				S235_.BackgroundTransparency = 0.9990000128746033
-				S235_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S235_.BorderSizePixel = 0
-				S235_.Position = UDim2.new(0, 10, 0, 23)
-				S235_.Size = UDim2.new(1, -180, 0, 12)
-				S235_.Name = "SliderContent"
-				S235_.Parent = S232_
+            S234_.Font = Enum.Font.GothamBold
+            S234_.Text = S230_.Title
+            S234_.TextColor3 = Color3.fromRGB(230, 230, 230)
+            S234_.TextSize = 13
+            S234_.TextXAlignment = Enum.TextXAlignment.Left
+            S234_.TextYAlignment = Enum.TextYAlignment.Top
+            S234_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            S234_.BackgroundTransparency = 0.999
+            S234_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S234_.BorderSizePixel = 0
+            S234_.Position = UDim2.new(0, 10, 0, 10)
+            S234_.Size = UDim2.new(1, -180, 0, 13)
+            S234_.Name = "SliderTitle"
+            S234_.Parent = S232_
 
-				S235_.Size = UDim2.new(1, -180, 0, 12 + (12 * (S235_.TextBounds.X // S235_.AbsoluteSize.X)))
-				S235_.TextWrapped = true
-				S232_.Size = UDim2.new(1, 0, 0, S235_.AbsoluteSize.Y + 33)
+            S235_.Font = Enum.Font.GothamBold
+            S235_.Text = S230_.Content
+            S235_.TextColor3 = Color3.fromRGB(255, 255, 255)
+            S235_.TextSize = 12
+            S235_.TextTransparency = 0.6
+            S235_.TextXAlignment = Enum.TextXAlignment.Left
+            S235_.TextYAlignment = Enum.TextYAlignment.Bottom
+            S235_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            S235_.BackgroundTransparency = 0.999
+            S235_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S235_.BorderSizePixel = 0
+            S235_.Position = UDim2.new(0, 10, 0, 23)
+            S235_.Size = UDim2.new(1, -180, 0, 12)
+            S235_.Name = "SliderContent"
+            S235_.Parent = S232_
 
-				S235_:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
-					S235_.TextWrapped = false
-					S235_.Size = UDim2.new(1, -180, 0, 12 + (12 * (S235_.TextBounds.X // S235_.AbsoluteSize.X)))
-					S232_.Size = UDim2.new(1, 0, 0, S235_.AbsoluteSize.Y + 33)
-					S235_.TextWrapped = true
-					S183_func()
-				end)
+            S236_.AnchorPoint = Vector2.new(0, 0.5)
+            S236_.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+            S236_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S236_.BorderSizePixel = 0
+            S236_.Position = UDim2.new(1, -155, 0.5, 0)
+            S236_.Size = UDim2.new(0, 28, 0, 20)
+            S236_.Name = "SliderInput"
+            S236_.Parent = S232_
 
-				S236_.AnchorPoint = Vector2.new(0, 0.5)
-				S236_.BackgroundColor3 = S92_.Color
-				S236_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S236_.BorderSizePixel = 0
-				S236_.Position = UDim2.new(1, -155, 0.5, 0)
-				S236_.Size = UDim2.new(0, 28, 0, 20)
-				S236_.Name = "SliderInput"
-				S236_.Parent = S232_
+            S237_.CornerRadius = UDim.new(0, 2)
+            S237_.Parent = S236_
 
-				S237_.CornerRadius = UDim.new(0, 2)
-				S237_.Parent = S236_
+            S238_.Font = Enum.Font.GothamBold
+            S238_.Text = tostring(S230_.Default)
+            S238_.TextColor3 = Color3.fromRGB(255, 255, 255)
+            S238_.TextSize = 13
+            S238_.TextWrapped = true
+            S238_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            S238_.BackgroundTransparency = 0.999
+            S238_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S238_.BorderSizePixel = 0
+            S238_.Position = UDim2.new(0, -1, 0, 0)
+            S238_.Size = UDim2.new(1, 0, 1, 0)
+            S238_.Parent = S236_
 
-				S238_.Font = Enum.Font.GothamBold
-				S238_.Text = "90"
-				S238_.TextColor3 = Color3.fromRGB(255, 255, 255)
-				S238_.TextSize = 13
-				S238_.TextWrapped = true
-				S238_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-				S238_.BackgroundTransparency = 0.9990000128746033
-				S238_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S238_.BorderSizePixel = 0
-				S238_.Position = UDim2.new(0, -1, 0, 0)
-				S238_.Size = UDim2.new(1, 0, 1, 0)
-				S238_.Parent = S236_
+            S239_.AnchorPoint = Vector2.new(1, 0.5)
+            S239_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            S239_.BackgroundTransparency = 0.8
+            S239_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S239_.BorderSizePixel = 0
+            S239_.Position = UDim2.new(1, -20, 0.5, 0)
+            S239_.Size = UDim2.new(0, 100, 0, 3)
+            S239_.Name = "SliderFrame"
+            S239_.Parent = S232_
 
-				S239_.AnchorPoint = Vector2.new(1, 0.5)
-				S239_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				S239_.BackgroundTransparency = 0.800000011920929
-				S239_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S239_.BorderSizePixel = 0
-				S239_.Position = UDim2.new(1, -20, 0.5, 0)
-				S239_.Size = UDim2.new(0, 100, 0, 3)
-				S239_.Name = "SliderFrame"
-				S239_.Parent = S232_
+            S240_.Parent = S239_
 
-				S240_.Parent = S239_
+            S241_.AnchorPoint = Vector2.new(0, 0.5)
+            S241_.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Cor do slider
+            S241_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+            S241_.BorderSizePixel = 0
+            S241_.Position = UDim2.new(0, 0, 0.5, 0)
+            S241_.Size = UDim2.new(0.9, 0, 0, 1)
+            S241_.Name = "SliderDraggable"
+            S241_.Parent = S239_
 
-				S241_.AnchorPoint = Vector2.new(0, 0.5)
-				S241_.BackgroundColor3 = S92_.Color
-				S241_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S241_.BorderSizePixel = 0
-				S241_.Position = UDim2.new(0, 0, 0.5, 0)
-				S241_.Size = UDim2.new(0.899999976, 0, 0, 1)
-				S241_.Name = "SliderDraggable"
-				S241_.Parent = S239_
+            S242_.Parent = S241_
 
-				S242_.Parent = S241_
+            local S248_ = false
+            local function S249_func(S250_arg0, S251_arg1)
+                local S252_ = math.floor(S250_arg0 / S251_arg1 + (math.sign(S250_arg0) * 0.5)) * S251_arg1
+                if S252_ < 0 then 
+                    S252_ = S252_ + S251_arg1 
+                end
+                return S252_
+            end
 
-				S244_.AnchorPoint = Vector2.new(1, 0.5)
-				S244_.BackgroundColor3 = S92_.Color
-				S244_.BorderColor3 = Color3.fromRGB(0, 0, 0)
-				S244_.BorderSizePixel = 0
-				S244_.Position = UDim2.new(1, 4, 0.5, 0)
-				S244_.Size = UDim2.new(0, 8, 0, 8)
-				S244_.Name = "SliderCircle"
-				S244_.Parent = S241_
+            function S231_:Set(S253_arg0)
+                S253_arg0 = math.clamp(S249_func(S253_arg0, S230_.Increment), S230_.Min, S230_.Max)
+                S231_.Value = S253_arg0
+                S238_.Text = tostring(S253_arg0)
+                S241_.Size = UDim2.new((S253_arg0 - S230_.Min) / (S230_.Max - S230_.Min), 0, 1, 0)
+            end
 
-				S245_.Parent = S244_
+            S239_.InputBegan:Connect(function(S254_arg0)
+                if S254_arg0.UserInputType == Enum.UserInputType.MouseButton1 then 
+                    S248_ = true 
+                end 
+            end)
 
-				S246_.Color = S92_.Color
-				S246_.Parent = S244_
+            S239_.InputEnded:Connect(function(S255_arg0) 
+                if S255_arg0.UserInputType == Enum.UserInputType.MouseButton1 then 
+                    S248_ = false 
+                    S230_.Callback(S231_.Value)
+                end 
+            end)
 
-				local S248_ = false
-				local function S249_func(S250_arg0, S251_arg1)
-					local S252_ = math.floor(S250_arg0 / S251_arg1 + (math.sign(S250_arg0) * 0.5)) * S251_arg1
-					if S252_ < 0 then 
-						S252_ = S252_ + S251_arg1 
-					end
-					return S252_
-				end
-				function S231_:Set(S253_arg0)
-					S253_arg0 = math.clamp(S249_func(S253_arg0, S230_.Increment), S230_.Min, S230_.Max)
-					S231_.Value = S253_arg0
-					S238_.Text = tostring(S253_arg0)
-					S2_:Create(
-						S241_, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-						Size = UDim2.fromScale((S253_arg0 - S230_.Min) / (S230_.Max - S230_.Min), 1)
-					}):Play()
-				end
-				S239_.InputBegan:Connect(function(S254_arg0)
-					if S254_arg0.UserInputType == Enum.UserInputType.MouseButton1 then 
-						S248_ = true 
-					end 
-				end)
-				S239_.InputEnded:Connect(function(S255_arg0) 
-					if S255_arg0.UserInputType == Enum.UserInputType.MouseButton1 then 
-						S248_ = false 
-						S230_.Callback(S231_.Value)
-					end 
-				end)
-				S1_.InputChanged:Connect(function(S256_arg0)
-					if S248_ and S256_arg0.UserInputType == Enum.UserInputType.MouseMovement then 
-						local S257_ = math.clamp((S256_arg0.Position.X - S239_.AbsolutePosition.X) / S239_.AbsoluteSize.X, 0, 1)
-						S231_:Set(S230_.Min + ((S230_.Max - S230_.Min) * S257_)) 
-					end
-				end)
-				S238_:GetPropertyChangedSignal("Text"):Connect(function()
-					local S258_ = S238_.Text:gsub("[^%d]", "")
-					if S258_ ~= "" then
-						local S259_ = math.min(tonumber(S258_), S230_.Max)
-						S238_.Text = tostring(S259_)
-					else
-						S238_.Text = tostring(S258_)
-					end
-				end)
-				S238_.FocusLost:Connect(function()
-					if S238_.Text ~= "" then
-						S231_:Set(tonumber(S238_.Text))
-					else
-						S231_:Set(0)
-					end
-				end)
-				S231_:Set(tonumber(S230_.Default))
-				S185_ = S185_ + 1
-				return S231_
-			end
+            game:GetService("User InputService").InputChanged:Connect(function(S256_arg0)
+                if S248_ and S256_arg0.UserInputType == Enum.UserInputType.MouseMovement then 
+                    local S257_ = math.clamp((S256_arg0.Position.X - S239_.AbsolutePosition.X) / S239_.AbsoluteSize.X, 0, 1)
+                    S231_:Set(S230_.Min + ((S230_.Max - S230_.Min) * S257_)) 
+                end
+            end)
+            S238_:GetPropertyChangedSignal("Text"):Connect(function()
+                local S258_ = S238_.Text:gsub("[^%d]", "")
+                if S258_ ~= "" then
+                    local S259_ = math.min(tonumber(S258_), S230_.Max)
+                    S238_.Text = tostring(S259_)
+                else
+                    S238_.Text = "0"
+                end
+            end)
+
+            S238_.FocusLost:Connect(function()
+                if S238_.Text ~= "" then
+                    S231_:Set(tonumber(S238_.Text))
+                else
+                    S231_:Set(0)
+                end
+            end)
+
+            S231_:Set(tonumber(S230_.Default))
+            S185_ = S185_ + 1
+            return S231_
+      end
 			function S184_:AddInput(S260_arg0)
 				local S261_ = S260_arg0 or {}
 				S261_.Title = S261_.Title or ""
