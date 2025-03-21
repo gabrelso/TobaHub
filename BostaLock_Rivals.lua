@@ -74,7 +74,7 @@ local Tabs = {
 
 local MainGbox = Tabs.Main:AddLeftGroupbox("Principal")
 
-MainGbox:AddToggle("AutoGoalToggle", { Text = "Auto Goal" }):OnChanged(AutoGoal)
+MainGbox:AddToggle("AutoGoalToggle", { Text = "Auto Gol" }):OnChanged(AutoGoal)
 MainGbox:AddDivider()
 MainGbox:AddSlider("GetBallCooldownSlider", { Text = "Delay do TP", Default = 0.1, Min = 0.1, Max = 5, Rounding = 1 })
 MainGbox:AddToggle("GetBallToggle", { Text = "Pegar bola (TP)" }):OnChanged(GetBall)
