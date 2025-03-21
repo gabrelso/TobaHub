@@ -6,7 +6,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local function JoinGame()
     if LocalPlayer.Team.Name ~= "Visitor" then return end
-    while Toggles.JoinGameToggle.Value and LocalPlayer.Team.Name == "Visitor" do task.wait(0.1)
+    while Toggles.JoinGameToggle.Value and LocalPlayer.Team.Name == "Visitor" do
+        task.wait(0.1)
         for _, v in ipairs(ReplicatedStorage.Teams:GetDescendants()) do
             if v:IsA("ObjectValue") and v.Value == nil then
                 local args = {string.sub(v.Parent.Name, 1, #v.Parent.Name - 4), v.Name}
@@ -18,7 +19,8 @@ end
 
 local function AutoGoal()
     if LocalPlayer.Team.Name == "Visitor" then return end
-    while Toggles.AutoGoalToggle.Value do task.wait(0.1)
+    while Toggles.AutoGoalToggle.Value do
+        task.wait(0.1)
         if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
             local hasBall = workspace[LocalPlayer.Name].Values.HasBall.Value
             if hasBall then
@@ -36,7 +38,8 @@ end
 
 local function GetBall()
     if LocalPlayer.Team.Name == "Visitor" then return end
-    while Toggles.GetBallToggle.Value do task.wait(Options.GetBallCooldownSlider.Value)
+    while Toggles.GetBallToggle.Value do
+        task.wait(Options.GetBallCooldownSlider.Value)
         repeat
             task.wait()
         until workspace:FindFirstChild("Football")
