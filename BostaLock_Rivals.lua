@@ -6,7 +6,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local function JoinGame()
     if LocalPlayer.Team.Name ~= "Visitor" then return end
-    if Toggles.JoinGameToggle.Value then
+    while Toggles.JoinGameToggle.Value and LocalPlayer.Team.Name == "Visitor" do task.wait(0.1)
         for _, v in ipairs(ReplicatedStorage.Teams:GetDescendants()) do
             if v:IsA("ObjectValue") and v.Value == nil then
                 local args = {string.sub(v.Parent.Name, 1, #v.Parent.Name - 4), v.Name}
