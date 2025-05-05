@@ -577,7 +577,7 @@ function Lib:Init(Settings)
 			T.Completed:Wait()
 			KeySystem:Destroy()
 		end)
-        Lib.KeySystem = KeySystem
+                Lib.KeySystem = KeySystem
 		return _5432Key543Entered7654
 	end
 end
