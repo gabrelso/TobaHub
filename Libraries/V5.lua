@@ -2261,17 +2261,15 @@ function S9_:CreateWindow(S91_arg0)
 		S138_ = S138_ + 1
 		return S154_
 	end
-  function S93_:DestroyAll()
-      if S94_ then 
-          S94_:Destroy()
-      end
-      if S7_ and S7_.Parent then
-          S7_.Parent:Destroy()
-      end
-      if not S9_.Unloaded then
-          S9_.Unloaded = true
-      end
-  end 
+  function S9_:DestroyAll()
+    if S94_ and S94_.Parent then
+        S94_:Destroy()
+    end
+    if S7_ and S7_.Parent then
+        S7_.Parent:Destroy()
+    end
+    self.Unloaded = true
+  end
 	return S137_
 end
 return S9_
