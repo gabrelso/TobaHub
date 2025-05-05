@@ -777,6 +777,18 @@ function S9_:CreateWindow(S91_arg0)
 		end
 	end)
 
+  function S93_:DestroyAll()
+      if S94_ then 
+          S94_:Destroy()
+      end
+      if S7_ and S7_.Parent then
+          S7_.Parent:Destroy()
+      end
+      if not S9_.Unloaded then
+          S9_.Unloaded = true
+      end
+  end
+
 	S95_.Size = UDim2.new(0, 115 + S101_.TextBounds.X + 1 + S103_.TextBounds.X, 0, 350)
 	S8_func(S100_, S95_)
 
