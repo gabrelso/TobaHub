@@ -1,3 +1,5 @@
+-- Credits: https://github.com/biggaboy212/Maclib/tree/main
+
 local MacLib = { 
 	Options = {}, 
 	Folder = "Maclib", 
@@ -5955,3 +5957,4 @@ end
 
 
 return MacLib
+
