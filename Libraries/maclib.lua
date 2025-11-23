@@ -1962,18 +1962,18 @@ function MacLib:Window(Settings)
 					sliderHead.Size = UDim2.fromOffset(12, 12)
 					sliderHead.Parent = sliderBar
 					
-          -- JUNK MOBILE FIX
-          local sliderHitbox = Instance.new("TextButton")
-          sliderHitbox.Name = "SliderHitbox"
-          sliderHitbox.BackgroundTransparency = 1
-          sliderHitbox.BorderSizePixel = 0
-          sliderHitbox.AutoButtonColor = false
-          sliderHitbox.ZIndex = sliderHead.ZIndex
-          sliderHitbox.Size = UDim2.fromOffset(20, 20)
-          sliderHitbox.Text = ""
-          sliderHitbox.AnchorPoint = sliderHead.AnchorPoint
-          sliderHitbox.Position = sliderHead.Position
-          sliderHitbox.Parent = sliderBar
+                    -- JUNK MOBILE FIX
+                    local sliderHitbox = Instance.new("TextButton")
+                    sliderHitbox.Name = "SliderHitbox"
+                    sliderHitbox.BackgroundTransparency = 1
+                    sliderHitbox.BorderSizePixel = 0
+                    sliderHitbox.AutoButtonColor = false
+                    sliderHitbox.ZIndex = sliderHead.ZIndex
+                    sliderHitbox.Size = UDim2.fromOffset(20, 20)
+                    sliderHitbox.TextTransparency = 1
+                    sliderHitbox.AnchorPoint = sliderHead.AnchorPoint
+                    sliderHitbox.Position = sliderHead.Position
+                    sliderHitbox.Parent = sliderBar
 
 					sliderBar.Parent = sliderElements
 
@@ -5952,5 +5952,6 @@ function MacLib:Demo()
 	tabs.Main:Select()
 	MacLib:LoadAutoLoadConfig()
 end
+
 
 return MacLib
