@@ -1949,6 +1949,8 @@ function MacLib:Window(Settings)
 					sliderBar.BorderSizePixel = 0
 					sliderBar.Position = UDim2.fromScale(0.219, 0.457)
 					sliderBar.Size = UDim2.fromOffset(123, 3)
+					sliderBar.Active = true
+                    sliderBar.Selectable = true
 
 					local sliderHead = Instance.new("ImageButton")
 					sliderHead.Name = "SliderHead"
@@ -5900,3 +5902,4 @@ function MacLib:Demo()
 end
 
 return MacLib
+
