@@ -1,3 +1,5 @@
+-- https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt
+
 local MacLib = { 
 	Options = {}, 
 	Folder = "Maclib", 
@@ -5893,5 +5895,6 @@ function MacLib:Demo()
 	tabs.Main:Select()
 	MacLib:LoadAutoLoadConfig()
 end
+
 
 return MacLib
