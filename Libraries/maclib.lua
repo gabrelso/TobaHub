@@ -1,5 +1,3 @@
--- Credits: https://github.com/biggaboy212/Maclib/tree/main
-
 local MacLib = { 
 	Options = {}, 
 	Folder = "Maclib", 
@@ -456,7 +454,7 @@ function MacLib:Window(Settings)
 	sidebarGroup.BorderSizePixel = 0
 	sidebarGroup.Position = UDim2.fromOffset(0, 91)
 	sidebarGroup.Size = UDim2.new(1, 0, 1, -91)
-
+--[[
 	local userInfo = Instance.new("Frame")
 	userInfo.Name = "UserInfo"
 	userInfo.AnchorPoint = Vector2.new(0, 1)
@@ -466,7 +464,7 @@ function MacLib:Window(Settings)
 	userInfo.BorderSizePixel = 0
 	userInfo.Position = UDim2.fromScale(0, 1)
 	userInfo.Size = UDim2.new(1, 0, 0, 107)
-
+	
 	local informationGroup = Instance.new("Frame")
 	informationGroup.Name = "InformationGroup"
 	informationGroup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -585,7 +583,7 @@ function MacLib:Window(Settings)
 	userAndDisplayFrame.Parent = informationGroup
 
 	informationGroup.Parent = userInfo
-
+	
 	local userInfoUIPadding = Instance.new("UIPadding")
 	userInfoUIPadding.Name = "UserInfoUIPadding"
 	userInfoUIPadding.PaddingLeft = UDim.new(0, 10)
@@ -593,7 +591,7 @@ function MacLib:Window(Settings)
 	userInfoUIPadding.Parent = userInfo
 
 	userInfo.Parent = sidebarGroup
-
+]]--
 	local sidebarGroupUIPadding = Instance.new("UIPadding")
 	sidebarGroupUIPadding.Name = "SidebarGroupUIPadding"
 	sidebarGroupUIPadding.PaddingLeft = UDim.new(0, 10)
@@ -607,7 +605,7 @@ function MacLib:Window(Settings)
 	tabSwitchers.BackgroundTransparency = 1
 	tabSwitchers.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	tabSwitchers.BorderSizePixel = 0
-	tabSwitchers.Size = UDim2.new(1, 0, 1, -107)
+	tabSwitchers.Size = UDim2.fromScale(1, 1)
 
 	local tabSwitchersScrollingFrame = Instance.new("ScrollingFrame")
 	tabSwitchersScrollingFrame.Name = "TabSwitchersScrollingFrame"
@@ -1964,18 +1962,18 @@ function MacLib:Window(Settings)
 					sliderHead.Size = UDim2.fromOffset(12, 12)
 					sliderHead.Parent = sliderBar
 					
-                    -- JUNK MOBILE FIX
-                    local sliderHitbox = Instance.new("TextButton")
-                    sliderHitbox.Name = "SliderHitbox"
-                    sliderHitbox.BackgroundTransparency = 1
-                    sliderHitbox.BorderSizePixel = 0
-                    sliderHitbox.AutoButtonColor = false
-                    sliderHitbox.ZIndex = sliderHead.ZIndex
-                    sliderHitbox.Size = UDim2.fromOffset(20, 20)
-                    sliderHitbox.TextTransparency = 1
-                    sliderHitbox.AnchorPoint = sliderHead.AnchorPoint
-                    sliderHitbox.Position = sliderHead.Position
-                    sliderHitbox.Parent = sliderBar
+          -- JUNK MOBILE FIX
+          local sliderHitbox = Instance.new("TextButton")
+          sliderHitbox.Name = "SliderHitbox"
+          sliderHitbox.BackgroundTransparency = 1
+          sliderHitbox.BorderSizePixel = 0
+          sliderHitbox.AutoButtonColor = false
+          sliderHitbox.ZIndex = sliderHead.ZIndex
+          sliderHitbox.Size = UDim2.fromOffset(20, 20)
+          sliderHitbox.Text = ""
+          sliderHitbox.AnchorPoint = sliderHead.AnchorPoint
+          sliderHitbox.Position = sliderHead.Position
+          sliderHitbox.Parent = sliderBar
 
 					sliderBar.Parent = sliderElements
 
@@ -5404,7 +5402,7 @@ function MacLib:Window(Settings)
 	function WindowFunctions:GetAcrylicBlurState()
 		return acrylicBlur
 	end
-
+--[[
 	local function _SetUserInfoState(State)
 		if State then
 			headshot.Image = (isReady and headshotImage) or "rbxassetid://0"
@@ -5434,7 +5432,7 @@ function MacLib:Window(Settings)
 	function WindowFunctions:GetUserInfoState(State)
 		return showUserInfo
 	end
-
+]]--
 	function WindowFunctions:SetSize(Size)
 		base.Size = Size
 	end
@@ -5955,6 +5953,4 @@ function MacLib:Demo()
 	MacLib:LoadAutoLoadConfig()
 end
 
-
 return MacLib
-
