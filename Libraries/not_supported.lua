@@ -202,32 +202,6 @@ function Library:Window(Info)
             end)
         end
 
-        function section:AddClearButton()
-            local clearBtn = Instance.new("TextButton")
-            clearBtn.Name = "ClearButton"
-            clearBtn.Text = "Clear List"
-            clearBtn.Font = Enum.Font.GothamMedium
-            clearBtn.TextSize = 12
-            clearBtn.Size = UDim2.fromOffset(70, 26)
-            clearBtn.Position = UDim2.new(1, -114, 0.5, -13)
-            clearBtn.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
-            clearBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-            clearBtn.ZIndex = 3
-            clearBtn.Parent = topBar
-
-            local btnCorner = Instance.new("UICorner")
-            btnCorner.CornerRadius = UDim.new(0, 6)
-            btnCorner.Parent = clearBtn
-
-            clearBtn.MouseButton1Click:Connect(function()
-                for _, child in pairs(scroll:GetChildren()) do
-                    if child:IsA("Frame") then
-                        child:Destroy()
-                    end
-                end
-            end)
-        end
-
         return section
     end
 
@@ -235,4 +209,3 @@ function Library:Window(Info)
 end
 
 return Library
-
