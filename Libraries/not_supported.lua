@@ -7,6 +7,23 @@ local TweenService = getService("TweenService")
 local CoreGui = getService("CoreGui")
 local TeleportService = getService("TeleportService")
 local Players = getService("Players")
+local HttpService = getService("HttpService")
+
+local function GetGameImage(placeId)
+    local universeUrl = "https://apis.roblox.com/universes/v1/places/"..placeId.."/universe"
+    local universeResponse = game:HttpGet(universeUrl)
+    local universeData = HttpService:JSONDecode(universeResponse)
+    if not universeData or not universeData.universeId then
+        return nil
+    end
+    local thumbUrl = "https://thumbnails.roblox.com/v1/games/icons?universeIds="..universeData.universeId.."&size=512x512&format=Png&isCircular=false"
+    local thumbResponse = game:HttpGet(thumbUrl)
+    local thumbData = HttpService:JSONDecode(thumbResponse)
+    if thumbData and thumbData.data and thumbData.data[1] then
+        return thumbData.data[1].imageUrl
+    end
+    return nil
+end
 
 local Library = {}
 
@@ -138,9 +155,9 @@ function Library:Window(Info)
             local corner = Instance.new("UICorner")
             corner.CornerRadius = UDim.new(0, 8)
             corner.Parent = row
-          
+            
             local img = Instance.new("ImageLabel")
-            img.Image = "rbxthumb://type=GameIcon&id=" .. tostring(placeId) .. "&w=150&h=150"
+            img.Image = GetGameImage(places)
             img.Size = UDim2.fromOffset(24, 24)
             img.Position = UDim2.fromOffset(4, 4)
             img.BackgroundTransparency = 1
