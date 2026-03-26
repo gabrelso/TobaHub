@@ -157,7 +157,7 @@ function Library:Window(Info)
             corner.Parent = row
             
             local img = Instance.new("ImageLabel")
-            img.Image = GetGameImage(places)
+            img.Image = GetGameImage(placeId)
             img.Size = UDim2.fromOffset(24, 24)
             img.Position = UDim2.fromOffset(4, 4)
             img.BackgroundTransparency = 1
