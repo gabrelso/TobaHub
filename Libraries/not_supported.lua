@@ -8,20 +8,26 @@ local CoreGui = getService("CoreGui")
 local TeleportService = getService("TeleportService")
 local Players = getService("Players")
 local HttpService = getService("HttpService")
+local req = request or http_request or (http and http.request) or (syn and syn.request) or (fluxus and fluxus.request) or (krnl and krnl.request) or nil
 
 local function GetGameImage(placeId)
-    local universeUrl = "https://apis.roblox.com/universes/v1/places/"..placeId.."/universe"
-    local universeResponse = game:HttpGet(universeUrl)
-    local universeData = HttpService:JSONDecode(universeResponse)
-    if not universeData or not universeData.universeId then
-        return nil
-    end
-    local thumbUrl = "https://thumbnails.roblox.com/v1/games/icons?universeIds="..universeData.universeId.."&size=512x512&format=Png&isCircular=false"
-    local thumbResponse = game:HttpGet(thumbUrl)
-    local thumbData = HttpService:JSONDecode(thumbResponse)
+    local universeRes = req({
+        Url = "https://apis.roblox.com/universes/v1/places/"..placeId.."/universe",
+        Method = "GET"
+    })
+    local universeData = HttpService:JSONDecode(universeRes.Body)
+    local universeId = universeData.universeId
+    if not universeId then return nil end
+
+    local thumbRes = req({
+        Url = "https://thumbnails.roblox.com/v1/games/icons?universeIds="..universeId.."&size=512x512&format=Png&isCircular=false",
+        Method = "GET"
+    })
+    local thumbData = HttpService:JSONDecode(thumbRes.Body)
     if thumbData and thumbData.data and thumbData.data[1] then
         return thumbData.data[1].imageUrl
     end
+
     return nil
 end
 
@@ -209,3 +215,4 @@ function Library:Window(Info)
 end
 
 return Library
+
